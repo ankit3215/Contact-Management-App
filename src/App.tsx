@@ -53,7 +53,7 @@ const Contacts: React.FC = () => {
 const Map: React.FC = () => {
   return (
     <div className="Map">
-      <div className="w-full">
+      <div className="w-full graph">
         <LineGraph />
       </div>
       <div className="w-full mb-4">

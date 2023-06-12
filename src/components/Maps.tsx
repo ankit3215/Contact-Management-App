@@ -38,7 +38,6 @@ const Maps: React.FC = () => {
 
   return (
     <div style={{ height: '500px', width: '100%' }}>
-      <h2 className="text-2xl font-semibold mb-4">Charts and Maps</h2>
       <ReactMapGL
         {...viewport}
         mapboxApiAccessToken='pk.eyJ1IjoiYW5raXQzMjE1IiwiYSI6ImNsaXN0cXhidDB4YW0zdHBodjBleWNiY3oifQ.-B2OpVUG_AmeKHLVvpbg8A'

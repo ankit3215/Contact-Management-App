@@ -11,6 +11,14 @@
   width: 200px;
 }
 
+.header{
+  text-align: center;
+  margin-bottom: 0px;
+  background-color: #978ee7;
+  height: 50px;
+  position: sticky;
+}
+
 .form{
   height: 300px;
   display: flex;
