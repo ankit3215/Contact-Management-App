@@ -21,7 +21,7 @@ const ContactForm: React.FC = () => {
       return;
     }
 
-    if (!/^([a-zA-Z]+\s)*[a-zA-Z]+$/.test(name)) {
+    if (!/^([a-zA-Z]+\s)*[a-zA-Z]+$/.test(name.trim())) {
       setError('Invalid name format');
       return;
     }

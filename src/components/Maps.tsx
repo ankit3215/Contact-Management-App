@@ -41,7 +41,7 @@ const Maps: React.FC = () => {
       <ReactMapGL
         {...viewport}
         mapboxApiAccessToken='pk.eyJ1IjoiYW5raXQzMjE1IiwiYSI6ImNsaXN0cXhidDB4YW0zdHBodjBleWNiY3oifQ.-B2OpVUG_AmeKHLVvpbg8A'
-        onViewportChange={(newViewport) => setViewport(newViewport)}
+        onViewportChange={(newViewport: React.SetStateAction<{ width: string; height: string; latitude: number; longitude: number; zoom: number; }>) => setViewport(newViewport)}
       >
         {countryData.map((country: any) => (
           <Marker

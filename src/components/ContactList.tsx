@@ -99,6 +99,7 @@ const ContactList: React.FC = () => {
             {editingContact ? (
               <>
                 <div className="bg-white p-6 rounded-md">
+                  <p>Edit Contact</p>
                   <input
                     type="text"
                     className="w-full py-2 px-4 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"

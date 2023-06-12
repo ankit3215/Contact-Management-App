@@ -1,46 +1,9 @@
-# Getting Started with Create React App
+This is a basic contact management app which is integrated along with a maps and chart dashboard that shows covid cases in form of Line graph and Total numner of deaths, active cases in the form of a popup on the world map.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+I have used Redux for state management and to save, edit and delete the contacts accordingly.
 
-## Available Scripts
+When the user opens the web app, there will be two buttons in the sidebar. One for contacts and one for maps.
 
-In the project directory, you can run:
+When the user clicks on Contacts section, the user will be able to see a create contact button, in which the user can enter the details of thee contact and then save it, which will then be displayed below in the form of card. The user can later edit or delete the contact accordingly.
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+In the maps section, the page is divided into two sections, the upper section shows covid data in the form of line graph and the second section shows a world map in which you can see the total number of cases and deaths in a country by simply clicking on the marker of that particular country.
