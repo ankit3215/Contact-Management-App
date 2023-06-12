@@ -1,26 +1,66 @@
 import React from 'react';
-import logo from './logo.svg';
+import LineGraph from './components/LineGraph';
+import Maps from './components/Maps';
+import { QueryClient, QueryClientProvider } from 'react-query';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import ContactForm from './components/ContactForm';
+import ContactList from './components/ContactList';
+import ContactDetails from './components/ContactDetails';
 import './App.css';
 
-function App() {
+const App: React.FC = () => {
+  const queryClient = new QueryClient();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <QueryClientProvider client={queryClient}>
+      <BrowserRouter>
+        <div className="App">
+          <nav className="sidebar">
+            <Link to="/contacts" className="nav-link">
+              Contacts
+            </Link>
+            <Link to="/map" className="nav-link">
+              Map
+            </Link>
+          </nav>
+          <div className="content">
+            <Routes>
+              <Route path="/" element={<Contacts />} />
+              <Route path="/contacts" element={<Contacts />} />
+              <Route path="/contacts/:id" element={<ContactDetails />} />
+              <Route path="/map" element={<Map />} />
+            </Routes>
+          </div>
+        </div>
+      </BrowserRouter>
+    </QueryClientProvider>
+  );
+};
+
+const Contacts: React.FC = () => {
+  return (
+    <div className='contact'>
+      <div className="mb-4 form">
+        <ContactForm />
+      </div>
+      <div className="mt-1">
+        <ContactList />
+      </div>
     </div>
   );
-}
+};
+
+const Map: React.FC = () => {
+  return (
+    <div className="Map">
+      <div className="w-full">
+        <LineGraph />
+      </div>
+      <div className="w-full mb-4">
+        <Maps />
+      </div>
+    </div>
+  );
+};
 
 export default App;
