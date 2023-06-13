@@ -2,7 +2,7 @@ import React from 'react';
 import LineGraph from './components/LineGraph';
 import Maps from './components/Maps';
 import { QueryClient, QueryClientProvider } from 'react-query';
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { HashRouter, Routes, Route, Link } from 'react-router-dom';
 import ContactForm from './components/ContactForm';
 import ContactList from './components/ContactList';
 import ContactDetails from './components/ContactDetails';
@@ -13,7 +13,7 @@ const App: React.FC = () => {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <BrowserRouter>
+      <HashRouter>
         <div className="App">
           <nav className="sidebar">
             <Link to="/" className="nav-link">
@@ -31,7 +31,7 @@ const App: React.FC = () => {
             </Routes>
           </div>
         </div>
-      </BrowserRouter>
+      </HashRouter>
     </QueryClientProvider>
   );
 };
