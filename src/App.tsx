@@ -16,7 +16,7 @@ const App: React.FC = () => {
       <BrowserRouter>
         <div className="App">
           <nav className="sidebar">
-            <Link to="/contacts" className="nav-link">
+            <Link to="/" className="nav-link">
               Contacts
             </Link>
             <Link to="/map" className="nav-link">
@@ -26,8 +26,7 @@ const App: React.FC = () => {
           <div className="content">
             <Routes>
               <Route path="/" element={<Contacts />} />
-              <Route path="/contacts" element={<Contacts />} />
-              <Route path="/contacts/:id" element={<ContactDetails />} />
+              <Route path="/:id" element={<ContactDetails />} />
               <Route path="/map" element={<Map />} />
             </Routes>
           </div>
