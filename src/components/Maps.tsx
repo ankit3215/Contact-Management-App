@@ -45,7 +45,7 @@ const Maps: React.FC = () => {
   };
 
   return (
-    <div style={{ height: '500px', width: '100%' }}>
+    <div style={{ height: 500 }}>
       <ReactMapGL
         {...viewport}
         mapboxApiAccessToken='pk.eyJ1IjoiYW5raXQzMjE1IiwiYSI6ImNsaXN0cXhidDB4YW0zdHBodjBleWNiY3oifQ.-B2OpVUG_AmeKHLVvpbg8A'
