@@ -2,7 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { useCountryData } from '../api/api';
 import ReactMapGL, { Marker, Popup } from 'react-map-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
-import mapboxgl from 'mapbox-gl';
+// @ts-ignore
+// eslint-disable-next-line import/no-webpack-loader-syntax
+import mapboxgl from '!mapbox-gl';
 
  // The following is required to stop "npm build" from transpiling mapbox code.
     // notice the exclamation point in the import.
